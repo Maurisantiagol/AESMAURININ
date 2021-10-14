@@ -1,4 +1,4 @@
-Algoritmo DES con archivos.txt
+Algoritmo AES con archivos.txt
 Creado por:
 Montes de Oca Arellano Edgar y
 Santiago De Luis Mauricio
