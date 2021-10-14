@@ -1,31 +1,98 @@
 let formulario = document.getElementById("formulario");
 
-function Cifrado(event){
+function Cifrado(event) {
     var Password = formulario.Password.value.length;
 
-    if (Password==8) {
+    if(document.getElementById('128').checked == true){
+        if (Password == 16) {
+            formulario.setAttribute("action", "/cifrar");
+    
+        } else {
+            alert("ingrese una contraseña de 16 caracteres ni mas ni menos");
+            formulario.setAttribute("action", "/index");
+    
+        }
+    }else
+    if(document.getElementById('192').checked == true){
+        if (Password == 24) {
+            formulario.setAttribute("action", "/cifrar");
+    
+        } else {
+            alert("ingrese una contraseña de 24 caracteres ni mas ni menos");
+            formulario.setAttribute("action", "/index");
+    
+        }
+    }else
+    if(document.getElementById('256').checked == true){
+        if (Password == 32) {
+            formulario.setAttribute("action", "/cifrar");
+    
+        } else {
+            alert("ingrese una contraseña de 32 caracteres ni mas ni menos");
+            formulario.setAttribute("action", "/index");
+    
+        }
+    }
+    
+
+
+    /*
+    if (Password == 8) {
         formulario.setAttribute("action", "/cifrar");
 
-      }else{
-    alert("ingrese una contraseña de 8 caracteres ni mas ni menos");
-    formulario.setAttribute("action", "/index");
+    } else {
+        alert("ingrese una contraseña de 8 caracteres ni mas ni menos");
+        formulario.setAttribute("action", "/index");
 
-      }
+    }*/
 }
-function Decifrado(event){
+function Decifrado(event) {
     var Password = formulario.Password.value.length;
 
-    if (Password ==8) {
-        formulario.setAttribute("action", "/descifrar");
-    }else{
-    alert("ingrese una contraseña de 8 caracteres ni mas ni menos");
-    formulario.setAttribute("action", "/index");
 
-      }
+    if(document.getElementById('128').checked == true){
+        if (Password == 16) {
+            formulario.setAttribute("action", "/descifrar");
+    
+        } else {
+            alert("ingrese una contraseña de 16 caracteres ni mas ni menos");
+            formulario.setAttribute("action", "/index");
+    
+        }
+    }else
+    if(document.getElementById('192').checked == true){
+        if (Password == 24) {
+            formulario.setAttribute("action", "/descifrar");
+    
+        } else {
+            alert("ingrese una contraseña de 24 caracteres ni mas ni menos");
+            formulario.setAttribute("action", "/index");
+    
+        }
+    }else
+    if(document.getElementById('256').checked == true){
+        if (Password == 32) {
+            formulario.setAttribute("action", "/descifrar");
+    
+        } else {
+            alert("ingrese una contraseña de 32 caracteres ni mas ni menos");
+            formulario.setAttribute("action", "/index");
+    
+        }
+    }
+
+
+    /* if (Password == 8) {
+         formulario.setAttribute("action", "/descifrar");
+     } else {
+         alert("ingrese una contraseña de 8 caracteres ni mas ni menos");
+         formulario.setAttribute("action", "/index");
+ 
+     }*/
 
 }
 
-    
+
 
 
 
@@ -133,10 +200,10 @@ function Decifrado(event){
 const crypto = require('crypto');
 const fs = require('fs');
 let archivo, mensaje;
-    archivo = "prueba.txt"; 
+    archivo = "prueba.txt";
     mensaje = fs. readFileSync(archivo, 'utf8');
-    console.log("El contenido del txt es: "); 
-    console.log(mensaje); 
+    console.log("El contenido del txt es: ");
+    console.log(mensaje);
     console.log("");
 const config = {
     cryptkey: "5TGB&YHN7UJM(IK<5TGB&YHN",//24
