@@ -2,11 +2,16 @@ let formulario = document.getElementById("formulario");
 
 function Cifrado(event) {
     var Password = formulario.Password.value.length;
+    const contenido = document.getElementById("subir_archivo");
 
     if(document.getElementById('128').checked == true){
         if (Password == 16) {
+            if(contenido.value == "") {
+                alert("Necesitas añadir un archivo valido para cifrar");
+                formulario.setAttribute("action", "/index");
+            }else{
             formulario.setAttribute("action", "/cifrar");
-    
+            }
         } else {
             alert("ingrese una contraseña de 16 caracteres ni mas ni menos");
             formulario.setAttribute("action", "/index");
@@ -15,7 +20,12 @@ function Cifrado(event) {
     }else
     if(document.getElementById('192').checked == true){
         if (Password == 24) {
+            if(contenido.value == "") {
+                alert("Necesitas añadir un archivo valido para cifrar");
+                formulario.setAttribute("action", "/index");
+            }else{
             formulario.setAttribute("action", "/cifrar");
+            }
     
         } else {
             alert("ingrese una contraseña de 24 caracteres ni mas ni menos");
@@ -25,7 +35,12 @@ function Cifrado(event) {
     }else
     if(document.getElementById('256').checked == true){
         if (Password == 32) {
+            if(contenido.value == "") {
+                alert("Necesitas añadir un archivo valido para cifrar");
+                formulario.setAttribute("action", "/index");
+            }else{
             formulario.setAttribute("action", "/cifrar");
+            }
     
         } else {
             alert("ingrese una contraseña de 32 caracteres ni mas ni menos");
@@ -48,11 +63,17 @@ function Cifrado(event) {
 }
 function Decifrado(event) {
     var Password = formulario.Password.value.length;
+    const contenido = document.getElementById("subir_archivo");
 
 
     if(document.getElementById('128').checked == true){
         if (Password == 16) {
+            if(contenido.value == "") {
+                alert("Necesitas añadir un archivo valido para cifrar");
+                formulario.setAttribute("action", "/index");
+            }else{
             formulario.setAttribute("action", "/descifrar");
+            }
     
         } else {
             alert("ingrese una contraseña de 16 caracteres ni mas ni menos");
@@ -62,7 +83,12 @@ function Decifrado(event) {
     }else
     if(document.getElementById('192').checked == true){
         if (Password == 24) {
+            if(contenido.value == "") {
+                alert("Necesitas añadir un archivo valido para cifrar");
+                formulario.setAttribute("action", "/index");
+            }else{
             formulario.setAttribute("action", "/descifrar");
+            }
     
         } else {
             alert("ingrese una contraseña de 24 caracteres ni mas ni menos");
@@ -72,7 +98,12 @@ function Decifrado(event) {
     }else
     if(document.getElementById('256').checked == true){
         if (Password == 32) {
+            if(contenido.value == "") {
+                alert("Necesitas añadir un archivo valido para cifrar");
+                formulario.setAttribute("action", "/index");
+            }else{
             formulario.setAttribute("action", "/descifrar");
+            }
     
         } else {
             alert("ingrese una contraseña de 32 caracteres ni mas ni menos");
@@ -91,8 +122,6 @@ function Decifrado(event) {
      }*/
 
 }
-
-
 
 
 
